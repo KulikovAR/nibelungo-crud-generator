@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
+	"time"
 
 	"github.com/KulikovAR/go-crud-generator/internal/domain"
 	"github.com/KulikovAR/go-crud-generator/internal/usecase"
@@ -45,12 +47,19 @@ var generateCmd = &cobra.Command{
 		generator := usecase.NewGenerator()
 
 		// Генерируем проект
+		fmt.Println("Генерация проекта...")
+		progress := 0
+		for progress < 100 {
+			progress += 10
+			fmt.Printf("\rПрогресс: [%s%s] %d%%", strings.Repeat("=", progress/10), strings.Repeat(" ", 10-progress/10), progress)
+			time.Sleep(100 * time.Millisecond)
+		}
+		fmt.Println()
 		if err := generator.Generate(&config); err != nil {
-			fmt.Printf("Error generating project: %v\n", err)
+			fmt.Printf("Ошибка генерации проекта: %v\n", err)
 			os.Exit(1)
 		}
-
-		fmt.Printf("Project %s generated successfully!\n", config.Name)
+		fmt.Printf("✨ Проект %s успешно сгенерирован! ✨\n", config.Name)
 	},
 }
 

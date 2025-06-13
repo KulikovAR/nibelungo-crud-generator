@@ -8,7 +8,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/KulikovAR/go-core/internal/domain"
+	"github.com/KulikovAR/go-crud-generator/internal/domain"
 	"github.com/Masterminds/sprig/v3"
 	"github.com/iancoleman/strcase"
 )

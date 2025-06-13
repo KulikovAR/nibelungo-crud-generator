@@ -20,7 +20,7 @@ func New{{.Name}}() *{{.Name}} {
 
 import (
 	"context"
-	"github.com/KulikovAR/go-core/internal/domain"
+	"github.com/KulikovAR/go-crud-generator/internal/domain"
 )
 
 type {{.Name}}Repository interface {
@@ -38,8 +38,8 @@ type {{.Name}}Repository interface {
 import (
 	"context"
 	"database/sql"
-	"github.com/KulikovAR/go-core/internal/domain"
-	"github.com/KulikovAR/go-core/internal/repository"
+	"github.com/KulikovAR/go-crud-generator/internal/domain"
+	"github.com/KulikovAR/go-crud-generator/internal/repository"
 )
 
 type {{.Name}}Repository struct {
@@ -81,8 +81,8 @@ func (r *{{.Name}}Repository) List(ctx context.Context) ([]*domain.{{.Name}}, er
 
 import (
 	"context"
-	"github.com/KulikovAR/go-core/internal/domain"
-	"github.com/KulikovAR/go-core/internal/repository"
+	"github.com/KulikovAR/go-crud-generator/internal/domain"
+	"github.com/KulikovAR/go-crud-generator/internal/repository"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -125,8 +125,8 @@ func (r *{{.Name}}Repository) List(ctx context.Context) ([]*domain.{{.Name}}, er
 
 import (
 	"context"
-	"github.com/KulikovAR/go-core/internal/domain"
-	"github.com/KulikovAR/go-core/internal/repository"
+	"github.com/KulikovAR/go-crud-generator/internal/domain"
+	"github.com/KulikovAR/go-crud-generator/internal/repository"
 )
 
 type {{.Name}}UseCase interface {
@@ -171,8 +171,8 @@ func (uc *{{.Name | ToLower}}UseCase) List(ctx context.Context) ([]*domain.{{.Na
 
 import (
 	"context"
-	"github.com/KulikovAR/go-core/internal/domain"
-	"github.com/KulikovAR/go-core/internal/usecase"
+	"github.com/KulikovAR/go-crud-generator/internal/domain"
+	"github.com/KulikovAR/go-crud-generator/internal/usecase"
 )
 
 type {{.Name}}Controller struct {
