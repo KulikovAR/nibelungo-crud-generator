@@ -1,0 +1,33 @@
+{
+    "name": "example-project",
+    "module": "github.com/KulikovAR/example-project",
+    "entities": [
+        {
+            "name": "User",
+            "fields": [
+                {
+                    "name": "ID",
+                    "type": "int64"
+                },
+                {
+                    "name": "Username",
+                    "type": "string"
+                },
+                {
+                    "name": "Email",
+                    "type": "string"
+                },
+                {
+                    "name": "CreatedAt",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "repositories": ["postgres", "mongodb"],
+    "features": {
+        "rest": true,
+        "grpc": false,
+        "migrations": true
+    }
+} 
