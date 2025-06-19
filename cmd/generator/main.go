@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/KulikovAR/go-crud-generator/internal/domain"
-	"github.com/KulikovAR/go-crud-generator/internal/usecase"
+	"github.com/KulikovAR/nibelungo-crud-generator/internal/domain"
+	"github.com/KulikovAR/nibelungo-crud-generator/internal/usecase"
 	"github.com/spf13/cobra"
 )
 
