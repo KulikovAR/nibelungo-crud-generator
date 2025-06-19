@@ -3,7 +3,7 @@
     "module": "github.com/KulikovAR/example-project",
     "entities": [
         {
-            "name": "User",
+            "name": "NikolaySidenko",
             "fields": [
                 {
                     "name": "ID",
@@ -22,12 +22,33 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "name": "VladRudenko",
+            "fields": [
+                {
+                    "name": "ID",
+                    "type": "int64"
+                },
+                {
+                    "name": "Name",
+                    "type": "string"
+                },
+                {
+                    "name": "Description",
+                    "type": "string"
+                },
+                {
+                    "name": "CreatedAt",
+                    "type": "string"
+                }
+            ]
         }
     ],
     "repositories": ["postgres", "mongodb"],
     "features": {
         "rest": true,
-        "grpc": false,
+        "grpc": true,
         "migrations": true
     }
 } 

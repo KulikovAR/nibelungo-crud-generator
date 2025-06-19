@@ -1,4 +1,4 @@
-module github.com/KulikovAR/go-crud-generator
+module github.com/KulikovAR/nibelungo-crud-generator
 
 go 1.24
 

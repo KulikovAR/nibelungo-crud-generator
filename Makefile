@@ -2,7 +2,7 @@
 
 # Переменные
 BINARY_NAME=generator
-DOCKER_IMAGE=go-crud-generator
+DOCKER_IMAGE=nibelungo-crud-generator
 DOCKER_TAG=latest
 
 # Сборка локально

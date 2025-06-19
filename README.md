@@ -6,8 +6,8 @@
 
 1. Клонируй репозиторий:
    ```sh
-   git clone https://github.com/KulikovAR/go-crud-generator.git
-   cd go-crud-generator
+   git clone https://github.com/KulikovAR/nibelungo-crud-generator.git
+   cd nibelungo-crud-generator
    ```
 
 2. Собери генератор:
