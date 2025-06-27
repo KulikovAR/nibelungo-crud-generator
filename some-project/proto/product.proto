@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+package product;
+
+option go_package = "github.com/KulikovAR/github.com/KulikovAR/some-project/pkg/proto/product";
+
+import "google/protobuf/timestamp.proto";
+
+service productService {
+  rpc Createproduct(CreateproductRequest) returns (productResponse);
+  rpc Getproduct(GetproductRequest) returns (productResponse);
+  rpc Updateproduct(UpdateproductRequest) returns (productResponse);
+  rpc Deleteproduct(DeleteproductRequest) returns (DeleteproductResponse);
+  rpc Listproducts(ListproductsRequest) returns (ListproductsResponse);
+}
+
+message product {
+  string id = 1;
+  
+  int64 id = 2;
+  
+  string name = 3;
+  
+  string description = 4;
+  
+  double price = 5;
+  
+  string created_at = 6;
+  
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+}
+
+message CreateproductRequest {
+  
+  int64 id = 1;
+  
+  string name = 2;
+  
+  string description = 3;
+  
+  double price = 4;
+  
+  string created_at = 5;
+  
+}
+
+message GetproductRequest {
+  string id = 1;
+}
+
+message UpdateproductRequest {
+  string id = 1;
+  
+  int64 id = 2;
+  
+  string name = 3;
+  
+  string description = 4;
+  
+  double price = 5;
+  
+  string created_at = 6;
+  
+}
+
+message DeleteproductRequest {
+  string id = 1;
+}
+
+message DeleteproductResponse {
+  bool success = 1;
+}
+
+message ListproductsRequest {
+  int32 page = 1;
+  int32 limit = 2;
+}
+
+message ListproductsResponse {
+  repeated product products = 1;
+  int32 total = 2;
+}
+
+message productResponse {
+  product product = 1;
+  string error = 2;
+}

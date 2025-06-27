@@ -1,0 +1,18 @@
+{
+    "collection": "users",
+    "indexes": [
+        {
+            "keys": {
+                "id": 1
+            },
+            "options": {
+                "unique": true
+            }
+        },
+        {
+            "keys": {
+                "created_at": -1
+            }
+        }
+    ]
+}

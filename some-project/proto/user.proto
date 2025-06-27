@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "github.com/KulikovAR/github.com/KulikovAR/some-project/pkg/proto/user";
+
+import "google/protobuf/timestamp.proto";
+
+service userService {
+  rpc Createuser(CreateuserRequest) returns (userResponse);
+  rpc Getuser(GetuserRequest) returns (userResponse);
+  rpc Updateuser(UpdateuserRequest) returns (userResponse);
+  rpc Deleteuser(DeleteuserRequest) returns (DeleteuserResponse);
+  rpc Listusers(ListusersRequest) returns (ListusersResponse);
+}
+
+message user {
+  string id = 1;
+  
+  int64 id = 2;
+  
+  string username = 3;
+  
+  string email = 4;
+  
+  string created_at = 5;
+  
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+message CreateuserRequest {
+  
+  int64 id = 1;
+  
+  string username = 2;
+  
+  string email = 3;
+  
+  string created_at = 4;
+  
+}
+
+message GetuserRequest {
+  string id = 1;
+}
+
+message UpdateuserRequest {
+  string id = 1;
+  
+  int64 id = 2;
+  
+  string username = 3;
+  
+  string email = 4;
+  
+  string created_at = 5;
+  
+}
+
+message DeleteuserRequest {
+  string id = 1;
+}
+
+message DeleteuserResponse {
+  bool success = 1;
+}
+
+message ListusersRequest {
+  int32 page = 1;
+  int32 limit = 2;
+}
+
+message ListusersResponse {
+  repeated user users = 1;
+  int32 total = 2;
+}
+
+message userResponse {
+  user user = 1;
+  string error = 2;
+}

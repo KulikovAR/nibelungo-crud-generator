@@ -1,9 +1,9 @@
 {
-    "name": "example-project",
-    "module": "github.com/KulikovAR/example-project",
+    "name": "some-project",
+    "module": "github.com/KulikovAR/some-project",
     "entities": [
         {
-            "name": "NikolaySidenko",
+            "name": "user",
             "fields": [
                 {
                     "name": "ID",
@@ -11,11 +11,15 @@
                 },
                 {
                     "name": "Username",
-                    "type": "string"
+                    "type": "string",
+                    "required": true,
+                    "unique": true
                 },
                 {
                     "name": "Email",
-                    "type": "string"
+                    "type": "string",
+                    "required": true,
+                    "unique": true
                 },
                 {
                     "name": "CreatedAt",
@@ -24,7 +28,7 @@
             ]
         },
         {
-            "name": "VladRudenko",
+            "name": "product",
             "fields": [
                 {
                     "name": "ID",
@@ -32,11 +36,17 @@
                 },
                 {
                     "name": "Name",
-                    "type": "string"
+                    "type": "string",
+                    "required": true
                 },
                 {
                     "name": "Description",
                     "type": "string"
+                },
+                {
+                    "name": "Price",
+                    "type": "float64",
+                    "required": true
                 },
                 {
                     "name": "CreatedAt",
@@ -49,6 +59,10 @@
     "features": {
         "rest": true,
         "grpc": true,
-        "migrations": true
-    }
+        "migrations": true,
+        "tests": true,
+        "docker": true,
+        "swagger": true
+    },
+    "port": 8080
 } 
